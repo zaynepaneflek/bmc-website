@@ -18,10 +18,9 @@
           <nav aria-label="Main navigation">
             <a class="brand" href="#top">
               <span class="brand-mark">
-                <img src="Images/bmclogo2.jpg" alt="BMC Facility logo" onerror="this.style.display='none'; this.parentElement.classList.add('fallback');" />
+                <img src="Images/bmc logo.PNG" alt="BMC Facility logo" />
                 <span class="brand-fallback">BMC</span>
               </span>
-              <span class="brand-text">BMC Facility</span>
             </a>
             <button class="mobile-nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
               Menu
@@ -57,7 +56,7 @@
           </div>
         </div>
         <div class="hero-card">
-          <div class="carousel">
+          <div class="carousel" id="facility-carousel" aria-label="BMC Facility photos">
             <div class="carousel-container">
               <div class="carousel-slide fade">
                 <img src="Images/Bmc Facility 1 bk.png" alt="BMC Facility training" />
@@ -72,13 +71,13 @@
                 <img src="Images/Field 3.avif" alt="BMC Field 3" />
               </div>
             </div>
-            <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-            <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+            <button class="carousel-btn prev" type="button" aria-label="Previous facility photo">❮</button>
+            <button class="carousel-btn next" type="button" aria-label="Next facility photo">❯</button>
             <div class="carousel-dots">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-              <span class="dot" onclick="currentSlide(4)"></span>
+              <button class="dot" type="button" aria-label="Show facility photo 1"></button>
+              <button class="dot" type="button" aria-label="Show facility photo 2"></button>
+              <button class="dot" type="button" aria-label="Show facility photo 3"></button>
+              <button class="dot" type="button" aria-label="Show facility photo 4"></button>
             </div>
           </div>
         </div>
@@ -93,24 +92,24 @@
           <p>Our team brings together player development, performance science, and direct baseball experience.</p>
         </div>
         <div class="grid coach-grid">
-          <article class="card coach-card">
+          <a class="card coach-card" href="./conrad-orman.html" aria-label="View Conrad Orman coach bio">
             <img src="Images/Conrad-Orman.jpg" alt="Conrad Orman, Head Coach" />
             <div class="role">Head Coach</div>
             <h3>Coach Conrad Orman</h3>
             <p>Former professional pitching leader focused on arm health, tempo, and command.</p>
-          </article>
-          <article class="card coach-card">
+          </a>
+          <a class="card coach-card" href="./brain-larmonie.html" aria-label="View Brain Larmonie coach bio">
             <img src="Images/CoachBrain.jpg" alt="Strength and mechanics session" />
             <div class="role">Performance Director</div>
             <h3>Coach Brain Larmonie</h3>
             <p>Specializes in movement efficiency, speed development, and rotational power.</p>
-          </article>
-          <article class="card coach-card">
+          </a>
+          <a class="card coach-card" href="./den-boef.html" aria-label="View Coach den Boef bio">
             <img src="Images/bmclogo2.jpg" alt="BMC Facility branding" />
             <div class="role">Player Development</div>
             <h3>Coach den Boef</h3>
             <p>Supports hitters with a calm, technical approach to timing, balance, and intent.</p>
-          </article>
+          </a>
         </div>
       </section>
 
@@ -124,22 +123,25 @@
         </div>
         <div class="grid athlete-grid">
           <a class="athlete-card" href="alexander-albertus.html">
-            <img src="Images/Alex.jpg" alt="Alexander Albertus" class="athlete-photo" />
+            <img src="Images/Alex.jpg" alt="Alexander Albertus" class="athlete-photo alex-photo" />
             <span class="athlete-badge">Pro</span>
             <h3>Alexander Albertus</h3>
             <p>Elite hitter driving development with consistent power and polished mechanics.</p>
+            <div class="athlete-card-footer">View Bio</div>
           </a>
           <a class="athlete-card" href="lenny-ashby-jr.html">
-            <img src="Images/Lenny.jpg" alt="Lenny Ashby Jr." class="athlete-photo" />
+            <img src="Images/Lenny.jpg" alt="Lenny Ashby Jr." class="athlete-photo lenny-photo" />
             <span class="athlete-badge">College</span>
             <h3>Lenny Ashby Jr.</h3>
             <p>Committed athlete focused on speed, contact, and advanced game awareness.</p>
+            <div class="athlete-card-footer">View Bio</div>
           </a>
           <a class="athlete-card" href="max-irving.html">
-            <img src="Images/Max.jpg" alt="Max Irving" class="athlete-photo" />
+            <img src="Images/Max.jpg" alt="Max Irving" class="athlete-photo max-photo" />
             <span class="athlete-badge">Rising</span>
             <h3>Max Irving</h3>
             <p>Versatile prospect building elite skills through targeted training sessions.</p>
+            <div class="athlete-card-footer">View Bio</div>
           </a>
         </div>
       </section>
@@ -186,26 +188,6 @@
         </div>
       </section>
 
-      <section id="testimonials" class="container reveal">
-        <div class="section-heading">
-          <div>
-            <div class="pill">Testimonials</div>
-            <h2>Players trust the process and feel the difference.</h2>
-          </div>
-          <p>Our athletes come for the training and stay for the results.</p>
-        </div>
-        <div class="grid testimonial-grid">
-          <article class="card testimonial">
-            <p>“The level of detail was incredible. My timing, confidence, and consistency all improved within weeks.”</p>
-            <strong>— Diego M., Catcher</strong>
-          </article>
-          <article class="card testimonial">
-            <p>“This facility feels like a true performance environment. Every session had purpose and direction.”</p>
-            <strong>— Luis R., Pitcher</strong>
-          </article>
-        </div>
-      </section>
-
       <section id="contact" class="container reveal">
         <div class="section-heading">
           <div>
@@ -219,12 +201,12 @@
             <h3>Visit the facility</h3>
             <div class="contact-list">
               <div><strong>Location:</strong> Piedra Plat 48c, Santa Cruz, Aruba</div>
-              <div><strong>Phone:</strong> <a href="tel:+297748508034">+297 748 5034</a></div>
-              <div><strong>Social:</strong> <a href="https://instagram.com/bmcfacility" target="_blank" rel="noopener noreferrer" style="color: var(--red);">@bmcfacility</a></div>
+              <div><strong>Phone:</strong> <a href="tel:+2977485034">+297 748 5034</a></div>
+              <div><strong>Social:</strong> <a href="https://instagram.com/bmcfacility" target="_blank" rel="noopener noreferrer">@bmcfacility</a></div>
             </div>
           </div>
           <div class="map-card">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.9999999999996!2d-70.04444!3d12.18722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e0a3c4c4c4c4c4d%3A0x4c4c4c4c4c4c4c4c!2sPiedra%20Plat%2048c%2C%20Santa%20Cruz%2C%20Aruba!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title="Map showing BMC Facility in Piedra Plat, Santa Cruz, Aruba" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3755.9999999999996!2d-70.04444!3d12.18722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e0a3c4c4c4c4c4d%3A0x4c4c4c4c4c4c4c4c!2sPiedra%20Plat%2048c%2C%20Santa%20Cruz%2C%20Aruba!5e0!3m2!1sen!2sus!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
